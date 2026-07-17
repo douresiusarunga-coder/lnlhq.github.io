@@ -3,97 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LNLHQ | AWS Cloud Engineer</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0d1117;
-    color:white;
+font-family:Arial,Helvetica,sans-serif;
+background:#0b1220;
+color:white;
+line-height:1.7;
 }
 
-header{
-    text-align:center;
-    padding:80px 20px;
-    background:#161b22;
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#111827;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 10%;
+box-shadow:0 5px 20px rgba(0,0,0,.4);
+z-index:1000;
 }
 
-h1{
-    font-size:48px;
-    margin-bottom:10px;
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#38bdf8;
 }
 
-h2{
-    color:#58a6ff;
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 60px;
+background:linear-gradient(180deg,#0b1220,#111827);
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:34px;
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:750px;
+margin:auto;
+font-size:20px;
+opacity:.9;
+}
+
+.buttons{
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+margin:10px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.primary{
+background:#38bdf8;
+color:#000;
+}
+
+.secondary{
+border:2px solid #38bdf8;
+color:#38bdf8;
+}
+
+.btn:hover{
+transform:translateY(-4px);
 }
 
 section{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+padding:90px 10%;
+}
+
+.section-title{
+font-size:38px;
+margin-bottom:30px;
+color:#38bdf8;
 }
 
 .card{
-    background:#161b22;
-    padding:20px;
-    margin-top:20px;
-    border-radius:10px;
+background:#182235;
+padding:30px;
+border-radius:15px;
+margin-bottom:30px;
+transition:.3s;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    color:#999;
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 35px rgba(0,0,0,.35);
 }
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<header>
+<nav>
+
+<div class="logo">LNLHQ</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certifications">Certifications</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
 <h1>LNLHQ</h1>
+
 <h2>Aspiring AWS Cloud Engineer</h2>
-<p>Building secure, scalable cloud solutions with Amazon Web Services.</p>
-</header>
 
-<section>
-
-<div class="card">
-<h2>About Me</h2>
-<p>Hello! I'm learning AWS Cloud Engineering and building hands-on cloud projects to grow my skills and help businesses build reliable cloud solutions.</p>
-</div>
-
-<div class="card">
-<h2>Skills</h2>
 <p>
-• AWS<br>
-• Linux<br>
-• Git & GitHub<br>
-• Networking<br>
-• HTML & CSS
+Building secure, scalable cloud infrastructure with Amazon Web Services while developing hands-on cloud engineering projects.
 </p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn primary">View Projects</a>
+
+<a href="#contact" class="btn secondary">Contact Me</a>
+
 </div>
 
-<div class="card">
-<h2>Projects</h2>
-<p>Projects will be added here as I complete them.</p>
 </div>
 
-<div class="card">
-<h2>Certifications</h2>
-<p>AWS Certified Cloud Practitioner (In Progress)</p>
-</div>
+</section>
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
 
 <div class="card">
-<h2>Contact</h2>
-<p>Email: Coming Soon</p>
+<p>
+Hello! I'm an aspiring AWS Cloud Engineer from Kenya who is passionate about cloud computing, networking, Linux, automation, and building secure, scalable solutions on Amazon Web Services. I'm continuously learning and creating practical projects to strengthen my skills.
+</p>
 </div>
 
 </section>
 
-<footer>
-© 2026 LNLHQ
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+<p>☁️ AWS Cloud</p>
+<p>🐧 Linux</p>
+<p>💻 Git & GitHub</p>
+<p>🌐 Networking</p>
+<p>🖥️ HTML & CSS</p>
+<p>⚡ Cloud Security Fundamentals</p>
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="card">
+<h3>Personal Cloud Portfolio</h3>
+<p>This responsive portfolio website is hosted using GitHub Pages and showcases my cloud engineering journey.</p>
+</div>
+
+<div class="card">
+<h3>AWS Cloud Projects</h3>
+<p>More AWS projects will be added here as I complete them.</p>
+</div>
+
+</section>
+
+<section id="certifications">
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="card">
+<h3>AWS Certified Cloud Practitioner</h3>
+<p>Currently preparing for certification.</p>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+<p>📧 Email: Coming Soon</p>
+<p>💼 GitHub: github.com/douresiusarunga-coder</p>
+</div>
+
+</section>
+
+<footer style="text-align:center;padding:35px;background:#111827;">
+© 2026 LNLHQ. Built with HTML & CSS.
 </footer>
 
 </body>
