@@ -184,6 +184,17 @@ font-size:24px;
     opacity:1;
     transform:translateY(0);
 }
+
+.fade{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
 </style>
 
 </head>
@@ -227,7 +238,7 @@ Building secure, scalable cloud infrastructure with Amazon Web Services while de
 </div>
 
 </section>
-<section id="about" class="hidden">
+<section id="about" class="fade">
 
 <h2 class="section-title">About Me</h2>
 
@@ -239,7 +250,7 @@ Hello! I'm an aspiring AWS Cloud Engineer from Kenya who is passionate about clo
 
 </section>
 
-<section id="skills" class="hidden">
+<section id="skills" class="fade">
 
 <h2 class="section-title">Skills</h2>
 
@@ -256,7 +267,7 @@ Hello! I'm an aspiring AWS Cloud Engineer from Kenya who is passionate about clo
 
 </section>
 
-<section id="projects" class="hidden">
+<section id="projects" class="fade">
 
 <h2 class="section-title">Projects</h2>
 
@@ -272,7 +283,7 @@ Hello! I'm an aspiring AWS Cloud Engineer from Kenya who is passionate about clo
 
 </section>
 
-<section id="certifications" class="hidden">
+<section id="certifications" class="fade">
 
 <h2 class="section-title">Certifications</h2>
 
@@ -283,7 +294,7 @@ Hello! I'm an aspiring AWS Cloud Engineer from Kenya who is passionate about clo
 
 </section>
 
-<section id="contact" class="hidden">
+<section id="contact" class="fade">
 
 <h2 class="section-title">Contact</h2>
 
@@ -307,8 +318,8 @@ const observer = new IntersectionObserver((entries)=>{
     });
 });
 
-document.querySelectorAll(".hidden").forEach((el)=>{
-    observer.observe(el);
+document.querySelectorAll(".fade").forEach(section=>{
+    observer.observe(section);
 });
 </script>
 </body>
