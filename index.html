@@ -304,6 +304,42 @@ font-size:24px;
     background:#0d6efd;
     font-size:13px;
 }
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:20px;
+background:#16213a;
+padding:20px;
+border-radius:12px;
+width:220px;
+box-shadow:0 10px 25px rgba(0,0,0,.5);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+nav ul li{
+margin:12px 0;
+}
+
+}
 </style>
 
 </head>
@@ -314,17 +350,23 @@ font-size:24px;
 
 <div class="logo">LNLHQ</div>
 
-<ul>
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-links">
+
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#journey">Journey</a></li>
 <li><a href="#certifications">Certifications</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
-
+  
 <section class="hero">
 
 <div>
@@ -519,6 +561,13 @@ const observer = new IntersectionObserver((entries)=>{
 
 document.querySelectorAll(".fade").forEach(section=>{
     observer.observe(section);
+});
+
+const menu=document.querySelector(".menu-toggle");
+const links=document.querySelector(".nav-links");
+
+menu.addEventListener("click",()=>{
+links.classList.toggle("active");
 });
 </script>
 </body>
