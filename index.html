@@ -472,6 +472,56 @@ transform:translate(40px,-30px) scale(1.05);
 transform:translate(0,0) scale(1);
 }
 
+/* ===== Timeline ===== */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:60px auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    width:3px;
+    height:100%;
+    background:#00bfff;
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:50px;
+    padding-left:70px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:10px;
+    top:5px;
+    width:22px;
+    height:22px;
+    background:#00bfff;
+    border-radius:50%;
+    box-shadow:0 0 20px #00bfff;
+}
+
+.timeline-content{
+    background:#101b2e;
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+}
+
+.timeline-content:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,191,255,.25);
+}
+
+.timeline-content h3{
+    color:#58c8ff;
+    margin-bottom:12px;
 }
 </style>
 
@@ -632,53 +682,57 @@ Responsive portfolio hosted with GitHub Pages showcasing my AWS learning journey
   
 </section>
 
-<section id="journey" class="fade">
+<section id="journey">
 
-<h2 class="section-title">AWS Learning Journey</h2>
+    <h2 class="section-title">Cloud Engineering Journey</h2>
 
-<div class="timeline">
+    <div class="timeline">
 
-<div class="timeline-item">
-<div class="timeline-card">
-<h3>Started Cloud Engineering</h3>
-<p>Began learning AWS Cloud, Linux, Git and networking fundamentals.</p>
-<span class="status">Completed ✓</span>
-</div>
-</div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2026 — Started Cloud Engineering</h3>
+                <p>
+                    Began learning AWS Cloud fundamentals, Linux, networking,
+                    Git and GitHub while building hands-on projects.
+                </p>
+            </div>
+        </div>
 
-<div class="timeline-item">
-<div class="timeline-card">
-<h3>Built Personal Portfolio</h3>
-<p>Created and deployed a professional portfolio using GitHub Pages.</p>
-<span class="status">Completed ✓</span>
-</div>
-</div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Designed and deployed this responsive portfolio using
+                    HTML, CSS and GitHub Pages.
+                </p>
+            </div>
+        </div>
 
-<div class="timeline-item">
-<div class="timeline-card">
-<h3>AWS Cloud Practitioner</h3>
-<p>Currently preparing for the certification exam.</p>
-<span class="status">In Progress</span>
-</div>
-</div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>AWS Cloud Practitioner</h3>
+                <p>
+                    Currently preparing for AWS Certified Cloud Practitioner
+                    certification.
+                </p>
+            </div>
+        </div>
 
-<div class="timeline-item">
-<div class="timeline-card">
-<h3>Hands-on AWS Projects</h3>
-<p>Building EC2, S3, IAM, VPC and Lambda projects.</p>
-<span class="status">Coming Soon</span>
-</div>
-</div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Future Goal</h3>
+                <p>
+                    Build production-ready AWS solutions and begin working
+                    as a Cloud Engineer.
+                </p>
+            </div>
+        </div>
 
-<div class="timeline-item">
-<div class="timeline-card">
-<h3>Cloud Engineer</h3>
-<p>Applying for cloud engineering opportunities with a strong portfolio.</p>
-<span class="status">Future Goal</span>
-</div>
-</div>
-
-</div>
+    </div>
 
 </section>
   
