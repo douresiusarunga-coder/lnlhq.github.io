@@ -339,6 +339,59 @@ nav ul li{
 margin:12px 0;
 }
 
+footer{
+margin-top:80px;
+padding:60px 20px;
+text-align:center;
+background:#111827;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-content{
+max-width:900px;
+margin:auto;
+}
+
+.footer-content h3{
+font-size:32px;
+color:#00bfff;
+margin-bottom:15px;
+}
+
+.footer-content p{
+color:#bbb;
+line-height:1.8;
+}
+
+.social-links{
+margin:30px 0;
+}
+
+.social-links a{
+display:inline-flex;
+justify-content:center;
+align-items:center;
+width:55px;
+height:55px;
+margin:0 10px;
+border-radius:50%;
+background:#16213a;
+color:#fff;
+font-size:24px;
+transition:.3s;
+text-decoration:none;
+}
+
+.social-links a:hover{
+background:#00bfff;
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(0,191,255,.5);
+}
+
+.copyright{
+margin-top:25px;
+font-size:14px;
+color:#888;
 }
 </style>
 
@@ -546,8 +599,38 @@ As I complete AWS hands-on labs, new cloud architecture projects will appear her
 
 </section>
 
-<footer style="text-align:center;padding:35px;background:#111827;">
-© 2026 LNLHQ. Built with HTML & CSS.
+<footer>
+
+<div class="footer-content">
+
+<h3>LNLHQ</h3>
+
+<p>
+Aspiring AWS Cloud Engineer passionate about building secure and scalable cloud solutions.
+</p>
+
+<div class="social-links">
+
+<a href="https://github.com/douresiusarunga-coder" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:YOUR_EMAIL@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
+
+<p class="copyright">
+© 2026 LNLHQ • Built with HTML, CSS & ❤️
+</p>
+
+</div>
+
 </footer>
 
 <script>
