@@ -18,7 +18,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:#0b1220;
+background:#07101d;
 color:white;
 line-height:1.7;
 }
@@ -393,11 +393,81 @@ margin-top:25px;
 font-size:14px;
 color:#888;
 }
+
+/* ===== Animated Glow Background ===== */
+
+.glow-bg{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.glow-bg span{
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.18;
+    animation:floatGlow 18s ease-in-out infinite;
+}
+
+.glow-bg span:nth-child(1){
+    background:#00bfff;
+    top:5%;
+    left:-5%;
+}
+
+.glow-bg span:nth-child(2){
+    background:#ff9900;
+    bottom:10%;
+    right:-8%;
+    animation-delay:6s;
+}
+
+.glow-bg span:nth-child(3){
+    background:#6c63ff;
+    top:55%;
+    left:45%;
+    animation-delay:12s;
+}
+
+@keyframes floatGlow{
+
+0%{
+transform:translate(0,0) scale(1);
+}
+
+25%{
+transform:translate(80px,-40px) scale(1.15);
+}
+
+50%{
+transform:translate(-60px,60px) scale(.9);
+}
+
+75%{
+transform:translate(40px,-30px) scale(1.05);
+}
+
+100%{
+transform:translate(0,0) scale(1);
+}
+
+}
 </style>
 
 </head>
 
 <body>
+
+<div class="glow-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
 <nav>
 
