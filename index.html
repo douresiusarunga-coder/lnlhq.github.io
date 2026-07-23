@@ -523,6 +523,55 @@ transform:translate(0,0) scale(1);
     color:#58c8ff;
     margin-bottom:12px;
 }
+
+/* ===== Theme Toggle ===== */
+
+#theme-toggle{
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#theme-toggle:hover{
+    transform:rotate(20deg) scale(1.15);
+}
+
+body.light-mode{
+    background:#f5f7fb;
+    color:#111827;
+}
+
+body.light-mode nav{
+    background:#ffffff;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+body.light-mode .card,
+body.light-mode .timeline-content,
+body.light-mode .project-card{
+    background:white;
+    color:#111827;
+}
+
+body.light-mode p{
+    color:#374151;
+}
+
+body.light-mode a{
+    color:#111827;
+}
+
+body.light-mode .logo{
+    color:#0078ff;
+}
+
+body.light-mode #theme-toggle{
+    color:#111827;
+}
+  
 </style>
 
 </head>
@@ -554,6 +603,10 @@ transform:translate(0,0) scale(1);
 
 </ul>
 
+<button id="theme-toggle" aria-label="Toggle Theme">
+    🌙
+</button>
+  
 </nav>
   
 <section class="hero">
@@ -811,6 +864,31 @@ const links=document.querySelector(".nav-links");
 menu.addEventListener("click",()=>{
 links.classList.toggle("active");
 });
+</script>
+
+<script>
+
+const toggle=document.getElementById("theme-toggle");
+
+if(localStorage.getItem("theme")==="light"){
+    document.body.classList.add("light-mode");
+    toggle.textContent="☀️";
+}
+
+toggle.onclick=()=>{
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+        toggle.textContent="☀️";
+        localStorage.setItem("theme","light");
+    }else{
+        toggle.textContent="🌙";
+        localStorage.setItem("theme","dark");
+    }
+
+};
+
 </script>
 </body>
 </html>
